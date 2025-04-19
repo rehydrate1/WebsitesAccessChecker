@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebsitesAccessChecker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Проверка доступности сайтов</h1>
+        <p>Введите URL сайтов для проверки (каждый на новой строке):</p>
+        <textarea id="urlsInput" rows="10" placeholder="https://google.com&#10;https://yandex.ru&#10;http://localhost:8000&#10;example.local"></textarea>
+        <button id="checkButton">Проверить</button>
+        
+        <h2>Результаты:</h2>
+        <div id="resultsArea">
+            <p>Здесь будут отображены результаты проверки...</p>
+        </div>
+         <div id="loadingIndicator" class="hidden">
+            <p>Идет проверка...</p>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
