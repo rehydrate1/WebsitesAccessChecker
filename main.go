@@ -15,9 +15,9 @@ func main() {
 	http.HandleFunc("/check", handlers.CheckHandler)
 	
 	port := ":8080"
-	log.Printf("Starting server at port http://localhost%s\n", port)
+	log.Printf("Сервер запущен на http://localhost%s\n", port)
 	err := http.ListenAndServe(port, nil)
 	if err != nil {
-		log.Fatal("Error starting the server:", err)
+		log.Fatal("Ошибка запуска сервера:", err)
 	}
 }
