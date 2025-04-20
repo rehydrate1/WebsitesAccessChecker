@@ -16,7 +16,7 @@
 
 2.  **Клонирование репозитория:**
     ```bash
-    git clone https://github.com/your-username/your-project-name.git
+    git clone https://github.com/rehydrate1/WebsitesAccessChecker.git
     cd WebsitesAccessChecker
     ```
 
