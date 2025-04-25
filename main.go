@@ -13,6 +13,7 @@ func main() {
 
 	http.Handle("/", fs)
 	http.HandleFunc("/check", handlers.CheckHandler)
+	http.HandleFunc("/get-hosts", handlers.GetHostsHandler)
 	
 	port := ":8080"
 	log.Printf("Сервер запущен на http://localhost%s\n", port)
