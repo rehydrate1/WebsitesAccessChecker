@@ -30,6 +30,10 @@ textarea {
     min-height: 150px; /* Ensure decent height */
 }
 
+.button-group {
+    margin-bottom: 15px;
+}
+
 button {
     display: inline-block;
     background-color: #007bff;
@@ -40,10 +44,20 @@ button {
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
+    margin-right: 10px; 
+}
+
+.button-group button:last-child {
+    margin-right: 0;
 }
 
 button:hover {
     background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
 }
 
 #resultsArea {

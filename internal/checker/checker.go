@@ -6,11 +6,11 @@ import (
 )
 
 type CheckResult struct {
-	URL				string	`json:"url"`
-	IsAvailable		bool	`json:"is_available"`
-	StatusCode 		int		`json:"status_code"`
-	Error			string	`json:"error"`
-	ResponseTimeMs	int64	`json:"response_time_ms"`
+	URL            string `json:"url"`
+	IsAvailable    bool   `json:"is_available"`
+	StatusCode     int    `json:"status_code"`
+	Error          string `json:"error"`
+	ResponseTimeMs int64  `json:"response_time_ms"`
 }
 
 func CheckSite(url string) CheckResult {
@@ -26,7 +26,7 @@ func CheckSite(url string) CheckResult {
 		return result
 	}
 	defer resp.Body.Close()
-	
+
 	result.StatusCode = resp.StatusCode
 	if resp.StatusCode >= 200 && resp.StatusCode < 300 {
 		result.IsAvailable = true

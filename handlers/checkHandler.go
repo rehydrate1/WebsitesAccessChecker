@@ -1,12 +1,12 @@
 package handlers
 
 import (
+	"encoding/json"
+	"github.com/rehydrate1/WebsitesAccessChecker/internal/checker"
+	"io"
 	"log"
 	"net/http"
-	"encoding/json"
-	"io"
 	"sync"
-	"github.com/rehydrate1/WebsitesAccessChecker/internal/checker"
 )
 
 func CheckHandler(w http.ResponseWriter, r *http.Request) {
@@ -47,7 +47,7 @@ func CheckHandler(w http.ResponseWriter, r *http.Request) {
 
 		go func(u string) {
 			defer wg.Done()
-			
+
 			result := checker.CheckSite(u)
 			resultChan <- result
 		}(url)

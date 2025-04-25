@@ -11,8 +11,12 @@
         <h1>Проверка доступности сайтов</h1>
         <p>Введите URL сайтов для проверки (каждый на новой строке):</p>
         <textarea id="urlsInput" rows="10" placeholder="https://google.com&#10;https://yandex.ru&#10;http://localhost:8000&#10;example.local"></textarea>
-        <button id="checkButton">Проверить</button>
         
+        <div class="button-group">
+            <button id="checkButton">Проверить</button>
+            <button id="loadHostsButton">Загрузить из hosts</button>
+        </div>
+
         <h2>Результаты:</h2>
         <div id="resultsArea">
             <p>Здесь будут отображены результаты проверки...</p>
